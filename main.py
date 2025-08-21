@@ -36,7 +36,7 @@ header = {
         'origin': 'https://ikuuu.one',
         'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
 }
-
+print(f'[{emails}] 进行登录...')
 for email, passwd in zip(emails, passwords):
     session = requests.session()
     data = {
