@@ -8,8 +8,8 @@ session = requests.session()
 # 从设置的环境变量中的Variables多个邮箱和密码 ,分割
 emails = os.environ.get('EMAIL', '').split(',')
 passwords = os.environ.get('PASSWD', '').split(',')
-print("EMAIL env:", os.environ.get('EMAIL'))
-print("PASSWD env:", os.environ.get('PASSWD'))
+
+
 # server酱
 SCKEY = os.environ.get('SCKEY')
 # PUSHPLUS
@@ -37,7 +37,7 @@ header = {
         'origin': 'https://ikuuu.one',
         'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
 }
-print(f'[{emails}] 进行登录...')
+
 for email, passwd in zip(emails, passwords):
     session = requests.session()
     data = {
